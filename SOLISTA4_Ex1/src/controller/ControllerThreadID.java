@@ -6,12 +6,14 @@ public class ControllerThreadID implements Runnable {
     }
     
      public void run (){
-        int tid = getID();
+       int tid = threadId();
 	System.out.println("Thread ID: " + tid);
 	}
         
-    private int getID() {
-        return (int) Thread.currentThread().getId();
+    private int threadId() {
+        return (int) Thread.currentThread().threadId();
     }
 }
+    
+
     
